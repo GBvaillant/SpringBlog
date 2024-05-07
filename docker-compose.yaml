@@ -1,0 +1,11 @@
+services:
+  db:
+    ports:
+      - 5439:5432
+    container_name: postgresql_blog
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=blog_api
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_USER=admin
